@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label "master"
-    }
+    agent 
     tools {
         // Note: this should match with the tool name configured in your jenkins instance (JENKINS_URL/configureTools/)
         maven "MVN_HOME"
@@ -13,18 +11,20 @@ pipeline {
         // This can be http or https
         NEXUS_PROTOCOL = "http"
         // Where your Nexus is running
-        NEXUS_URL = "34.201.219.251:8082/"
+        NEXUS_URL = "54.147.184.252:8081/"
         // Repository where we will upload the artifact
-        NEXUS_REPOSITORY = "soanrqube"
+        NEXUS_REPOSITORY = "simple_customer"
         // Jenkins credential id to authenticate to Nexus OSS
-        NEXUS_CREDENTIAL_ID = "nexus_keygen"
+        NEXUS_CREDENTIAL_ID = "nexus"
+		SCANNER_HOME = tool 'sonarqube'
+		 
     }
     stages {
         stage("clone code") {
             steps {
                 script {
                     // Let's clone the source
-                    git 'https://github.com/betawins/sabear_simplecutomerapp.git';
+                    git 'https://github.com/goudmanju/sabear_simplecutomerapp.git';
                 }
             }
         }
