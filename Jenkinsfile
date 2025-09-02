@@ -40,8 +40,8 @@ pipeline {
             steps {
                 withSonarQubeEnv('sonarqube_server') {
 				sh '$SCANNER_HOME/bin/sonar-scanner \
-				-Dsonar.projectKey=Ncodeit \
-				-Dsonar.projectName=Ncodeit \
+				-Dsonar.projectKey=simplecustomapp \
+				-Dsonar.projectName=simplecutomapp \
 				-Dsonar.projectVersion=2.0 \
 				-Dsonar.sources=/var/lib/jenkins/workspace/$JOB_NAME/src/ \
 				-Dsonar.binaries=target/classes/com/visualpathit/account/controller/ \
