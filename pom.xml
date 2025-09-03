@@ -26,8 +26,12 @@
       </plugins>
    </build>
    <distributionManagement>
+        <repository>
+         <id>nexus</id>
+         <url>http://54.227.108.194:8081/repository/manju-snapshot/</url>
+        </repository>
         <snapshotRepository>
-            <id>manju-snapshot</id>
+            <id>nexus</id>
             <url>http://54.227.108.194:8081/repository/manju-snapshot/</url>
         </snapshotRepository>
     </distributionManagement>
