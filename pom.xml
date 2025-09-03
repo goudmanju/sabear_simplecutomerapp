@@ -27,7 +27,7 @@
    </build>
    <distributionManagement>
         <snapshotRepository>
-            <id>snapshots</id>
+            <id>manju-snapshot</id>
             <url>http://54.227.108.194:8081/repository/manju-snapshot/</url>
         </snapshotRepository>
     </distributionManagement>
