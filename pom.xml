@@ -6,7 +6,7 @@
    <groupId>com.javatpoint</groupId>
    <artifactId>SimpleCustomerApp</artifactId>
    <packaging>war</packaging>
-   <version>${env.BUILD_NUMBER}-SNAPSHOT</version>
+   <version>${BUILD_NUMBER}-SNAPSHOT</version>
    <name>SimpleCustomerApp</name>
    <url>http://maven.apache.org</url>
    <properties>
@@ -26,13 +26,13 @@
       </plugins>
    </build>
    <distributionManagement>
-        <repository>
-         <id>nexus</id>
-         <url>http://18.212.85.222:8081/repository/manju-snapshot/</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus</id>
-            <url>http://18.212.85.222:8081/repository/manju-snapshot/</url>
-        </snapshotRepository>
-    </distributionManagement>
+  <repository>
+    <id>manju-snapshot</id>
+    <url>http://34.227.225.128:8081/repository/manju-snapshot/</url>
+  </repository>
+  <snapshotRepository>
+    <id>manju-snapshot</id>
+    <url>http://34.227.225.128:8081/repository/manju-snapshot/</url>
+  </snapshotRepository>
+   </distributionManagement>
 </project>
